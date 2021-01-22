@@ -31,6 +31,7 @@ html,
 body {
     padding: 0;
     margin: 0;
+    height: auto;
 }
 
 html {
@@ -77,6 +78,19 @@ body {
     height: 100%;
 }
 
+.night {
+    background-color: #c0c0c0;
+    color: black;
+    border-radius: 5px;
+    height: 30px;
+    border: 1px solid white;
+}
+
+.night:hover {
+    background-color: black;
+    color: white;
+}
+
 #app {
     padding: 40px 0;
 }
@@ -94,17 +108,18 @@ body {
     width: 480px;
     margin: 0 auto;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 10px !important;
     box-shadow: 0 3px 0 rgba(84, 94, 111, 0.2);
 }
 
 .todos-header {
     position: relative;
     padding: 24px 24px 0 24px;
+    border-radius: 10px 10px 0 0;
 }
 
 .todos-header div {
-    color: #777d8c;
+    color: #474a53;
     display: flex;
 }
 
@@ -115,7 +130,7 @@ body {
 .todos-title {
     margin: 0 0 8px;
     font-size: 36px;
-    color: #901f96;
+    color: #551258;
     letter-spacing: 0.2px;
     font-weight: normal;
 }
@@ -125,7 +140,7 @@ body {
     border: 0;
     font-family: 'Poppins';
     font-size: 12px;
-    color: #939aab;
+    color: #5c6069;
     padding: 0 5px;
     border-radius: 3px;
     cursor: pointer;
@@ -134,11 +149,12 @@ body {
 }
 
 .todos-clear:hover {
-    color: #ff5858;
+    color: #ffffff;
+    background-color: #f80000a6;
 }
 
 .todos-clear:focus {
-    color: #ff5858;
+    color: #ffffff;
     border-color: #ff5858;
 }
 
@@ -158,11 +174,11 @@ body {
     outline: 0;
     font-family: 'Poppins';
     font-size: 14px;
-    color: #545e6f;
+    color: #383e49;
 }
 
 .todos-form input::placeholder {
-    color: #777d8c;
+    color: #878e9e;
 }
 
 .todos-form input:focus {
@@ -185,6 +201,7 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
+    border-radius: 0 0 10px 10px;
 }
 
 .todos-list li {
@@ -237,6 +254,7 @@ body {
 .todos-list li span {
     flex-grow: 1;
     order: 2;
+    color: #383e49;
 }
 
 .todos-list li input[type='text'] {
@@ -246,7 +264,7 @@ body {
     border: none;
     outline: 0;
     font-family: 'Poppins';
-    color: #545e6f;
+    color: #3e4552;
     line-height: 26px;
     font-size: 16px;
     letter-spacing: 0.2px;
@@ -291,7 +309,7 @@ body {
 
 .todos-complete span {
     text-decoration: line-through;
-    color: #939aab;
+    color: #3c3f47;
 }
 
 .todo-error-msj {

@@ -2,7 +2,7 @@ const app = document.querySelector("#app");
 
 app.innerHTML = `
 <div class="container">
-<button class="night" onClick="ladoOscuro()">Cambiar Estilo!</button> 
+<button class="night" onClick="cambiarColor()">Cambiar Estilo!</button> 
 </div>
 <div class="todos">
     <div class="todos-header">
@@ -158,15 +158,24 @@ const clearCompletes = (e) => {
     }
 };
 
-// LADO OSCURO
+// cambiarColor!
+let colorDeFondo = ['#f5977d', '#fcc58e', '#fff69f', '#c5de9e', '#7dccc8', '#7fa8d7', '#8494c8', '#bc8ebe', '#f39bc1', '#f4999e', '#0c0c0c', '#fff'];
 
-const ladoOscuro = () => {
-    console.log('Convirtiendo al lado oscuro...');
-    document.querySelector('.todos ').classList.toggle("lado-oscuro");
-    document.querySelector('.todos-list').classList.toggle("lado-oscuro");
-    document.querySelector('.todos-form').classList.toggle("lado-oscuro");
-    document.querySelector('.todos-title').classList.toggle("lado-oscuro");
-};
+let i = 0;
+
+let cambiarColor = () => {
+    document.querySelector('.todos ').style.backgroundColor = colorDeFondo[i];
+    document.querySelector('.todos-list').style.backgroundColor = colorDeFondo[i];
+    document.querySelector('.todos-form').style.backgroundColor = colorDeFondo[i];
+    document.querySelector('.todos-title').style.backgroundColor = colorDeFondo[i];
+    document.querySelector('.todos-header').style.backgroundColor = colorDeFondo[i];
+    colorDeFondo[i++];
+    if (i == colorDeFondo.length) i = 0;
+    console.log('Cambiando color...');
+}
+
+
+
 
 
 // INIT FUNCTION -> Inicio de la app
